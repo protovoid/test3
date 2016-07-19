@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class FirstViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -19,7 +21,38 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: custom functions
+    
+    
+    
+    // MARK: IBActions
 
+    @IBAction func YesButtonPressed(sender: UIButton) {
+        AppDelegate.getAppDelegate().requestForAccess { (accessGranted) -> Void in
+            if accessGranted {
+                // do something here
+            }
+            // catch let error as NSError {
+               //  print(error.description, separator: "", terminator: "\n")
+           //  }
+        }
+       
+    }
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
 }
 

@@ -15,6 +15,7 @@
 		6374A8A31D3C4196002D6F80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6374A8A11D3C4196002D6F80 /* LaunchScreen.storyboard */; };
 		6374A8AE1D3C4197002D6F80 /* test3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374A8AD1D3C4197002D6F80 /* test3Tests.swift */; };
 		6374A8B91D3C4197002D6F80 /* test3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374A8B81D3C4197002D6F80 /* test3UITests.swift */; };
+		6374A8C91D3C4E68002D6F80 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6374A8C81D3C4E68002D6F80 /* Contacts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		6374A8B41D3C4197002D6F80 /* test3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6374A8B81D3C4197002D6F80 /* test3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test3UITests.swift; sourceTree = "<group>"; };
 		6374A8BA1D3C4197002D6F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6374A8C61D3C445E002D6F80 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		6374A8C81D3C4E68002D6F80 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6374A8C91D3C4E68002D6F80 /* Contacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +83,8 @@
 		6374A88A1D3C4196002D6F80 = {
 			isa = PBXGroup;
 			children = (
+				6374A8C81D3C4E68002D6F80 /* Contacts.framework */,
+				6374A8C61D3C445E002D6F80 /* AddressBook.framework */,
 				6374A8951D3C4196002D6F80 /* test3 */,
 				6374A8AC1D3C4196002D6F80 /* test3Tests */,
 				6374A8B71D3C4197002D6F80 /* test3UITests */,
