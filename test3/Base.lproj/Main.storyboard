@@ -21,13 +21,13 @@
                                 <rect key="frame" x="187" y="279" width="227" height="42"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Give us permission to make sending to friends easier." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
                                 <rect key="frame" x="129" y="329" width="344" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKJ-KN-RJ6">
@@ -39,6 +39,7 @@
                                 <state key="normal" title="Yes"/>
                                 <connections>
                                     <action selector="YesButtonPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="xpG-wf-sMB"/>
+                                    <segue destination="nWB-rz-fYd" kind="presentation" identifier="ContactSelect" id="8Lt-4D-PID"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -66,6 +67,51 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
+        <!--ContactSelectViewController-->
+        <scene sceneID="a2B-v6-mrJ">
+            <objects>
+                <viewController title="ContactSelectViewController" id="nWB-rz-fYd" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4tl-h1-D54"/>
+                        <viewControllerLayoutGuide type="bottom" id="wcV-W2-yz8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OUL-oB-81K">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Popular/Recent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKe-sJ-kiq">
+                                <rect key="frame" x="20" y="85" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="boP-Kg-TcD">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="nWB-rz-fYd" id="C6A-ol-Hz2"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="xxH-fT-lts" id="J4p-0m-igv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJF-mW-aLo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController searchResultsTitle="Title Goes Here" id="xxH-fT-lts">
+                    <connections>
+                        <outlet property="delegate" destination="nWB-rz-fYd" id="tcT-Vi-Wm6"/>
+                        <outlet property="searchBar" destination="boP-Kg-TcD" id="6CF-p7-Edv"/>
+                        <outlet property="searchContentsController" destination="nWB-rz-fYd" id="BNb-nn-7Nl"/>
+                        <outlet property="searchResultsDataSource" destination="nWB-rz-fYd" id="Vui-N6-pVk"/>
+                        <outlet property="searchResultsDelegate" destination="nWB-rz-fYd" id="pW2-un-omM"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1405" y="-320"/>
+        </scene>
         <!--Buy for Self-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
@@ -85,13 +131,13 @@
                                     <constraint firstAttribute="width" constant="210" id="1pI-6a-HMK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The card will appear in your wallet." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
                                 <rect key="frame" x="188" y="329" width="224" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WF-QJ-4cv">

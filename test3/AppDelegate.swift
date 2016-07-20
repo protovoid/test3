@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // find top view controller and present alert controller in it
     func showMessage(message: String) {
-        let alertController = UIAlertController(title: "Gyft", message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "Alert Title", message: message, preferredStyle: UIAlertControllerStyle.Alert)
         
         let dismissAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action) -> Void in
         }
@@ -82,7 +82,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 else {
                     if authorizationStatus == CNAuthorizationStatus.Denied {
                         dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                            let message = "\(accessError!.localizedDescription)\n\nPlease allow Gyft to access your contacts through Settings to make sending to friends easier. "
+                            let message = "\(accessError!.localizedDescription)\n\nPlease allow Gyft to access your contacts through Settings to make sending to friends easier."
                             self.showMessage(message)
                     })
                     }
